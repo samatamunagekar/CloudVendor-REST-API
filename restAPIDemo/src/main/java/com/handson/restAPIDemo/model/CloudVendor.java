@@ -1,14 +1,20 @@
 package com.handson.restAPIDemo.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table( name ="cloud_vendor_inf")
 public class CloudVendor {
 	
+	@Id
 	private String vendorID;
 	private String vendorName;
 	private String vendorAddress;
 	private String vendorNumber;
 	
 	public CloudVendor() {
-		super();
 	}
 
 	public CloudVendor(String vendorID, String vendorName, String vendorAddress, String vendorNumber) {
